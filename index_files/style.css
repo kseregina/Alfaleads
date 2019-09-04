@@ -1,0 +1,643 @@
+body {
+    background-color: #e6e6e6;
+    font-family: Roboto;
+}
+
+section {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.top-rectangle, .bottom-rectangle {
+    height: 100px;
+    width: 120%;
+    transform-origin: 0 0;
+    position: absolute;
+}
+
+.cawc {
+    text-align: -webkit-center;
+}
+
+#head {
+    background-color: #000;
+    background-image: url(head-bg.png);
+    z-index: 0;
+    padding-bottom: 100px;
+}
+
+@media (min-width: 992px) {
+    #head {
+        min-height: 988px;
+    }
+
+    #head .cb-button {
+        margin-bottom: 65px;
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 767px) {
+    #head {
+        background-color: #292929;
+        background-image: none;
+    }
+}
+
+#info {
+    background-color: white;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    #info {
+        padding-bottom: 130px;
+        padding-top: 30px;
+    }
+}
+
+#head .bottom-rectangle {
+    background-color: white;
+    transform: rotate(-3deg);
+    bottom: -100px;
+    left: 0px;
+    z-index: 0;
+}
+
+#head .h-lawyer {
+    width: 100%;
+    text-transform: uppercase;
+    color: #e6e6e6;
+    text-align: center;
+    padding-top: 85px;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+#head .hhl-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+#head .hh-line {
+    display: inline-block;
+    background: #e6e6e6;
+    height: 1px;
+    width: 265px;
+}
+
+#head .l-name {
+    width: 100%;
+    color: #ccc577;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#head .prices {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#head .price-elem .pe-name {
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    color: #e6e6e6;
+    font-weight: 100;
+}
+
+#head .price-elem .pehl-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+#head .price-elem .pehl-wrapper .pe-horis-line{
+    width: 60px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e6e6e6;
+}
+
+#head .price-elem .pe-price {
+    color: #ccc577;
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    #head {
+        padding-bottom: 55px;
+    }
+
+    #head .prices {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    #head .price-elem {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    #head .cb-phone, #head .cb-addr {
+        text-align: center;
+    }
+
+    #head .h-lawyer {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 504px) {
+    #head .l-name {
+        font-size: 40px;
+    }
+}
+
+#info .bottom-rectangle {
+    background-color: #E6E6E6;
+    transform: rotate(3deg);
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+#info img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#info .i-lawer {
+    color: #e0d9c7;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+#info .il-name {
+    font-size: 62px;
+    font-weight: 600;
+    color: #E0D9C7;
+    padding-bottom: 20px;
+    margin-top: -15px;
+}
+
+#info .counters .counter-label {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ccc577;
+    font-size: 16px;
+}
+
+#info .info-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #3d3d3d;
+    padding-bottom: 15px;
+}
+
+#info .diamond {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+    border: 2px solid #ccc577;
+}
+
+#info .diamond-content {
+    transform: rotate(45deg);
+    transform-origin: 18% 77%;
+    /* position: absolute; */
+    /* top: 26%; */
+    /* left: 32%; */
+    font-size: 33px;
+    color: #ccc577;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 370px) {
+    #info .il-name {
+        font-size: 50px;
+    }
+}
+
+#advantages .bottom-rectangle {
+    background-color: #161616;
+    transform: rotate(-3deg);
+    bottom: -100px;
+    left: 0px;
+    z-index: 1;
+}
+
+#advantages .advantage {
+    text-align: center;
+}
+
+#advantages .adv-header {
+    color: #b1ac7d;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+#advantages .adv-horis-line {
+    height: 1px;
+    background-color: #3d3d3d;
+    margin: 10px 35%;
+}
+
+#advantages .adv-desc {
+    color: #3d3d3d;
+    font-size: 15px;
+    padding: 0 22%;
+}
+
+@media (max-width: 991px) {
+    #advantages .advantage {
+        padding-bottom: 30px;
+    }
+
+    #advantages {
+        padding-bottom: 25px;
+        margin-top: -45px;
+    }
+}
+
+#reviews {
+    background-color: #161616;
+}
+
+#reviews .bottom-rectangle {
+    background-color: #E6E6E6;
+    transform: rotate(3deg);
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+#reviews .r-name {
+    color: #afab7c;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#reviews .r-horis-line {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 150px;
+    margin: 5px 0;
+}
+
+#reviews .r-info {
+    color: #e6e6e6;
+}
+
+#reviews .review-text {
+    color: #c9c9c9;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+#reviews .avatar-wrapper {
+    position: relative;
+    height: 350px;
+}
+
+#reviews .diamond {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    background-color: #e6e6e6;
+    position: absolute;
+    cursor: pointer;
+    top: 75px;
+    border: 3px solid #777;
+}
+
+#reviews .diamond img {
+    max-width: 100%;
+    transform: rotate(45deg);
+    margin-top: 25px;
+    margin-left: -29px;
+}
+
+#reviews .review-pic.active {
+    border: 3px solid #ccc577;
+    z-index: 999 !important;
+}
+
+#rp1 {
+    left: 90px;
+    z-index: 9;
+}
+
+#rp2 {
+    left: 240px;
+    z-index: 99;
+}
+
+#rp3 {
+    left: 390px;
+    z-index: 9;
+}
+
+@media (max-width: 1199px) {
+    #reviews .diamond {
+        height: 170px;
+        width: 170px;
+        top: 95px;
+    }
+
+    #rp1 {
+        left: 60px;
+        z-index: 9;
+    }
+
+    #rp2 {
+        left: 210px;
+        z-index: 99;
+    }
+
+    #rp3 {
+        left: 360px;
+        z-index: 9;
+    }
+}
+
+@media (max-width: 991px) {
+    #reviews {
+        padding-bottom: 130px;
+    }
+
+    #reviews .diamond {
+        height: 200px;
+        width: 200px;
+        top: 95px;
+    }
+
+    #rp1 {
+        left: 90px;
+        z-index: 9;
+    }
+
+    #rp2 {
+        left: 240px;
+        z-index: 99;
+    }
+
+    #rp3 {
+        left: 390px;
+        z-index: 9;
+    }
+}
+
+@media (max-width: 767px) {
+    #rp1, #rp2, #rp3 {
+        left: 0;
+        background: #e6e6e6;
+    }
+
+    #reviews .avatar-wrapper {
+        height: auto;
+        padding: 15px 0;
+        position: static;
+    }
+
+    #reviews .review-pic {
+        border: 3px solid #777;
+        border-radius: 100px;
+        overflow: hidden;
+    }
+
+    .review-pic img {
+        max-width: 100%;
+        top: 20px;
+    }
+}
+
+#docs .bottom-rectangle {
+    background-color: #414141;
+    transform: rotate(-3deg);
+    bottom: -100px;
+    left: 0px;
+    z-index: 1;
+}
+
+#docs .docs-header {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: #afab7c;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#docs img {
+    max-width:100%;
+}
+
+#doc-carousel {
+    min-height: 230px;
+}
+
+.doc {
+    cursor: pointer;
+}
+
+#callback {
+    background-color: #414141;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.cb-phone {
+    color: #afab7c;
+    font-size: 40px;
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+
+@media (max-width: 362px) {
+    .cb-phone {
+        font-size: 35px;
+    }
+}
+
+.cb-addr {
+    color: #e6e6e6;
+    font-size: 14px;
+    font-weight: 200;
+    padding-bottom: 10px;
+}
+
+.cb-button {
+    line-height: 70px;
+    background-color: #161616;
+    margin: 10px 30%;
+    color: #ccc577;
+    font-size: 22px;
+    font-weight: 100;
+    box-shadow: 4px 4px 2px -1px rgba(0,0,0,.30);
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    .cb-button {
+        margin: 10px 25%;
+    }
+}
+
+@media (max-width: 991px) {
+    .cb-button {
+        margin: 10px 15%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cb-button {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 452px) {
+    .cb-button {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.cb-button:hover {
+    box-shadow: none;
+}
+
+.review-tab {
+    display: none;
+}
+
+.review-tab.active {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .femida {
+        line-height: 490px;
+        text-align: center;
+    }
+}
+/*----------*/
+
+#doc-carousel .item img {
+    max-width: 100%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    line-height: 205px;
+}
+
+@media (max-width: 1199px) {
+    .carousel-control.left, .carousel-control.right {
+        line-height: 170px;
+    }
+}
+
+@media (max-width: 767px) {
+    #reviews {
+        margin-bottom: -55px;
+    }
+
+    #docs {
+        padding-bottom: 55px;
+    }
+
+    #docs .container {
+        width: 380px;
+    }
+
+    .carousel-control.left, .carousel-control.right {
+        line-height: 170px;
+    }
+
+    .carousel {
+        min-height: 205px;
+    }
+}
+
+@media (max-width: 400px) {
+    #docs .container {
+        width: 300px;
+    }
+
+    .carousel-control.left, .carousel-control.right {
+        line-height: 130px;
+    }
+
+    .carousel {
+        min-height: 132px;
+    }
+}
+
+.modal-header {
+    background-color: #414141;
+    color: #CCC577;
+    text-transform: uppercase;
+}
+
+.modal-title {
+    font-weight: 100;
+    text-align: center;
+}
+
+.modal-body, .modal-footer {
+    background-color: #e6e6e6;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding-top: 0;
+}
+
+.modal-body input {
+    background: #eee;
+    border: 1px solid #414141;
+    width: 100%;
+    padding: 5px 10px;
+    height: 50px;
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.modal-btn {
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+    .modal-footer {
+        padding: 10px 35px;
+        margin-top: -20px;
+    }
+}
+
+/*----------*/
