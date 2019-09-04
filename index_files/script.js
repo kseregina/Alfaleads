@@ -21,7 +21,7 @@ $(document).ready(function () {
         $('.review-tab').removeClass('active');
         $('#' + $(this).data('id')).addClass('active');
     });
-/*
+
     $('#send-cb').click(function () {
         var name = $('.modal-body input:eq(0)').val();
         var phone = $('.modal-body input:eq(1)').val();
@@ -44,11 +44,15 @@ $(document).ready(function () {
                 'name': name,
                 'phone': phone
             },
-            success: function () {
-                swal('Заявка отправлена!', 'Наш специалист свяжется с вами в течение нескольких минут', 'success');
+            success: function (data) {
+                swal(data.status == 'success' ? 'Заявка отправлена!' : 'Заявка не отправлена!', data.message, data.status);
+                $('.modal-body input:eq(1)').val('');
+            },
+            error: function () {
+                swal('Заявка не отправлена!', 'Пожалуйста попробуйте позже', 'error');
                 $('.modal-body input:eq(1)').val('');
             }
         });
     });
-    */
+
 });
