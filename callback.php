@@ -1,7 +1,30 @@
 <?php
-    // считаем что валидация вся уже выполена на клиенте
     $name  = $_POST["name"];
     $phone = $_POST["phone"];
+
+    // echo-ет ответ в JSON-е вида {"status": "error", "message": "ошибка"}
+    function show_error($message) {
+        $result = [
+            "status"  => "error",
+            "message" => $message
+        ];
+        header("Content-Type: application/json");
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+    }
+
+    // проверяем корректность данных
+    if (empty($name) || empty($phone)) {
+        show_error("Имя и телефон обязательны");
+        exit();
+    }
+    if (strlen($name) > 100 || strlen($phone) > 100) {
+        show_error("Имя либо телефон слишком длинные");
+        exit();
+    }
+    if (preg_match("^\+?[78]\s\(?\d{3}\)?\s?\d{3}.?\d{4}$", $phone) != 1) { // скопированно со страницы
+        show_error("Неверный формат телефона");
+        exit();
+    }
 
     // для простоты, берем адрес реально клиента
     // (может быть прокси, тогда нужно учесть X-Forwarded-For)
@@ -39,20 +62,17 @@
 
     // проверяем ошибки
     if ($response == FALSE) {
-        $result = [
-            "status"  => "error",
-            "message" => "Ошибка при работе с сервером"
-        ];
-    } else {
-        // декодируем резлуьтат из JSON-строки как массив
-        $response_json = json_decode($response, true);
-
-        // формируем ответ
-        $result = [
-            "status"  => $response_json["status"],
-            "message" => $response_json["message"]
-        ];
+        show_error("Ошибка при работе с сервером");
+        exit();
     }
+    // декодируем резлуьтат из JSON-строки как массив
+    $response_json = json_decode($response, true);
+
+    // формируем ответ
+    $result = [
+        "status"  => $response_json["status"],
+        "message" => $response_json["message"]
+    ];
 
     header("Content-Type: application/json");
 
